@@ -1,0 +1,52 @@
+<%= form_with(model: enrollment) do |form| %>
+  <% if enrollment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(enrollment.errors.count, "error") %> prohibited this enrollment from being saved:</h2>
+
+      <ul>
+        <% enrollment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :course_id, style: "display: block" %>
+    <%= form.text_field :course_id %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :pass_score, style: "display: block" %>
+    <%= form.number_field :pass_score %>
+  </div>
+
+  <div>
+    <%= form.label :progress, style: "display: block" %>
+    <%= form.number_field :progress %>
+  </div>
+
+  <div>
+    <%= form.label :score, style: "display: block" %>
+    <%= form.number_field :score %>
+  </div>
+
+  <div>
+    <%= form.label :completed, style: "display: block" %>
+    <%= form.check_box :completed %>
+  </div>
+
+  <div>
+    <%= form.label :graduate, style: "display: block" %>
+    <%= form.check_box :graduate %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

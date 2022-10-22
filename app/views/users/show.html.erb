@@ -1,0 +1,15 @@
+
+<h1><%= @user.email%>'s Page</h1>
+
+<h2>Courses</h2>
+<%= button_to "Register Course", new_enrollment_path, method: :get%>
+<ul>
+    <%@user.enrollments.each do |enrollment|%>
+        <li><%= enrollment.course.title%></li>
+        <%= button_to "Drop Enrollment", enrollment_path(enrollment), method: :delete%>
+    <%end%>
+</ul>
+
+<%= button_to "Edit user", edit_user_path, method: :get%>
+<%= button_to "Destroy user", user_path, method: :delete%>
+<%= link_to "Destroy user", user_path%>

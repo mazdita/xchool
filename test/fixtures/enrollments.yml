@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course: one
+  user: one
+  pass_score: 1
+  progress: 1
+  score: 1
+  completed: false
+  graduate: false
+
+two:
+  course: two
+  user: two
+  pass_score: 1
+  progress: 1
+  score: 1
+  completed: false
+  graduate: false

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  average_score: 1
+  average_progress: 1
+  graduated: false
+
+two:
+  user: two
+  average_score: 1
+  average_progress: 1
+  graduated: false
