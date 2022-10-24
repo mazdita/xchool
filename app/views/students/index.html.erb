@@ -1,14 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Students</h1>
-
-<div id="students">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User ID</th>
+      <th scope="col">Average Score</th>
+      <th scope="col">Average progress</th>
+      <th scope="col">Graduated</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @students.each do |student| %>
-    <%= render student %>
-    <p>
-      <%= link_to "Show this student", student %>
-    </p>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= student.user_id %></td>
+      <td><%= student.average_score %></td>
+      <td><%= student.average_progress %></td>
+      <td><%= student.graduated %></td>
+      <td><%= link_to "Show this student", student %>
+    </tr>
   <% end %>
-</div>
-
+  </tbody>
+</table>
 <%= link_to "New student", new_student_path %>
+

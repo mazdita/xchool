@@ -10,6 +10,7 @@
             <li><h3><%= link_to 'Courses', courses_path %></h3></li>
             <% if current_user.admin %>
                 <li><h3><%= link_to 'Enrollments', enrollments_path %></h3></li>
+                <li><h3><%= link_to 'Students', students_path %></h3></li>
             <% end %>
         <% else %>
             <li><h3><%= link_to 'Sign up', new_user_registration_path %></h3></li>
